@@ -12,6 +12,12 @@
 .puzzle {
   height: 250px;
 }
+.puzzle__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .puzzle__one {
   background-color: green;
@@ -39,6 +45,13 @@
 }
 .puzzle__nine {
   background-color: rgb(255, 132, 0);
+}
+
+.icon {
+  font-size: 5rem;
+}
+.puzzle:hover > .icon {
+  transform: scale(1.1);
 }
 
 @media (min-width: 992px) {

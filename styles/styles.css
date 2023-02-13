@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  background-color: aquamarine;
+}
+.app__row {
+}
+
+.puzzle {
+  height: 250px;
+}
+
+.puzzle__one {
+  background-color: green;
+}
+.puzzle__two {
+  background-color: orange;
+}
+.puzzle__three {
+  background-color: blue;
+}
+.puzzle__four {
+  background-color: rgb(19, 165, 214);
+}
+.puzzle__five {
+  background-color: rgb(255, 255, 255);
+}
+.puzzle__six {
+  background-color: rgb(248, 65, 65);
+}
+.puzzle__seven {
+  background-color: rgb(234, 255, 3);
+}
+.puzzle__eight {
+  background-color: rgb(79, 255, 123);
+}
+.puzzle__nine {
+  background-color: rgb(255, 132, 0);
+}
+
+@media (min-width: 992px) {
+  .app__row {
+    height: 33.3%;
+  }
+  .puzzle {
+    height: 100%;
+  }
+}

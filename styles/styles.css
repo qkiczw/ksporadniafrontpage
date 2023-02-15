@@ -1,32 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 .app {
   height: 100vh;
-  background-color: aquamarine;
 }
 .app__row {
 }
 
 .puzzle {
   height: 250px;
+  transition: all 0.3s;
 }
-.puzzle__content {
+.puzzle:hover {
+  /* background-color: lightgray; */
+  cursor: pointer;
+  filter: grayscale();
+}
+.puzzle:hover .puzzle__content {
+  transform: scale(1.2);
+  transition: all 0.25s;
+}
+
+.puzzle__brand {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.puzzle__brand__first {
+  font-size: 10rem;
+  font-family: "Roboto Serif", serif;
+}
+.puzzle__brand__second {
+  font-size: 1.5rem;
+}
+
+.puzzle__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: all 0.25s;
+}
+.puzzle__bg {
+  max-width: 100%;
+  object-fit: fill;
+}
 
 .puzzle__one {
-  background-color: green;
+  /* background-color: green; */
+  background: linear-gradient(rgba(3, 169, 244, 0.7), rgba(3, 169, 244, 0.7)),
+    url("https://cdn.pixabay.com/photo/2014/09/16/01/19/girl-447701_960_720.jpg");
+  background-size: cover;
 }
 .puzzle__two {
-  background-color: orange;
+  /* background-color: orange; */
+  background: linear-gradient(rgba(75, 175, 80, 0.7), rgba(75, 175, 80, 0.7)),
+    url("https://images.pexels.com/photos/594421/pexels-photo-594421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
 }
 .puzzle__three {
-  background-color: blue;
+  /* background-color: blue; */
+  background: linear-gradient(
+      rgba(158, 158, 158, 0.7),
+      rgba(158, 158, 158, 0.7)
+    ),
+    url("  https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
 }
 .puzzle__four {
   background-color: rgb(19, 165, 214);
@@ -38,10 +83,16 @@
   background-color: rgb(248, 65, 65);
 }
 .puzzle__seven {
-  background-color: rgb(234, 255, 3);
+  /* background-color: rgb(234, 255, 3); */
+  background: linear-gradient(rgba(3, 162, 255, 0.7), rgba(3, 162, 255, 0.7)),
+    url("https://cdn.pixabay.com/photo/2020/04/08/16/46/old-5018013_960_720.jpg");
+  background-size: cover;
 }
 .puzzle__eight {
-  background-color: rgb(79, 255, 123);
+  /* background-color: rgb(79, 255, 123); */
+  background: linear-gradient(rgba(205, 220, 57, 0.7), rgba(205, 220, 57, 0.7)),
+    url("https://images.pexels.com/photos/6814354/pexels-photo-6814354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
 }
 .puzzle__nine {
   background-color: rgb(255, 132, 0);
@@ -50,13 +101,10 @@
 .icon {
   font-size: 5rem;
 }
-.puzzle:hover > .icon {
-  transform: scale(1.1);
-}
 
 @media (min-width: 992px) {
   .app__row {
-    height: 33.3%;
+    height: 33.33%;
   }
   .puzzle {
     height: 100%;
